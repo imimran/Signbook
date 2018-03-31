@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Signbook</title>
+	<link rel="stylesheet" href="{% static 'signcss/style.css' %}">
+</head>
+<body>
+	<h2>Welcome to our Signbook</h2>
+	<p><a href="{% url 'sign' %}">SignUp here</a></p>
+  {% for c in comment %}
+	<p>{{ c.name }}</p>
+	<p>{{ c.comment }}</p>
+	{% endfor %}
+</body>
+</html>
